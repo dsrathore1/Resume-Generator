@@ -17,7 +17,7 @@ body {
 }
 
 .container1 {
-    height: 235vh;
+    height: 250vh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -27,7 +27,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 160vh;
+    height: 220vh;
     background-color: #FFDEE9;
     background-image: linear-gradient(62deg, #FFDEE9 0%, #B5FFFC 100%);
 }
@@ -71,9 +71,6 @@ select {
     text-align: center;
 }
 
-.name {
-    text-transform: uppercase;
-}
 
 .contact_heading {
     display: flex;
@@ -233,27 +230,54 @@ select {
     background-color: #dc3545;
 }
 
+#nameT1 {
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 20px;
+}
+
+.heading {
+    background-color: #585858;
+    border-radius: 9px;
+    color: #fff;
+    margin-top: 1rem;
+    text-align: center;
+    padding: 2rem 0;
+    text-transform: uppercase;
+}
+
+#applyForT{
+    font-size: 16px;
+    text-transform: capitalize;
+    margin-top: 1rem;
+    font-weight: 400;
+}
+
 #resume-template {
     display: none;
 }
+
+.name{
+    text-transform: uppercase;
+}
+
 @media screen and (max-width:1100px) {
     #resume-form {
-        height: 280vh;
+        height: 320vh;
     }
-    
+
 }
 
 @media screen and (max-width:760px) {
     #resume-template {
-        height: 250vh;
+        height: 300vh;
     }
-    
-    #resume-form{
-        height: 410vh;
+
+    #resume-form {
+        height: 450vh;
     }
-    
-    .gn_btn{
+
+    .gn_btn {
         width: 80%;
     }
 }
-
