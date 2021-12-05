@@ -11,14 +11,16 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
         integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="/Assets/favicon.ico" type="image/x-icon">
+    <link href="https://cdn.jsdelivr.net/npm/froala-editor@latest/css/froala_editor.pkgd.min.css" rel="stylesheet"
+        type="text/css" />
     <title>Resume Generator</title>
 </head>
 
 <body>
     <!-- Here goes html code -->
     <section class="container1" id="resume-form">
-        <div class="container" >
+        <div class="container">
             <div class="container2">
                 <div class="title">
                     <h1 class="mt-2 text-center">Hello! Please tell me a little <br> bit about yourself</h1>
@@ -53,7 +55,7 @@
                             <input type="url" class="form-control" id="linkedField">
                             <p for="twitter" class="twitter mt-2"><i class="fab fa-twitter"></i> Twitter</p>
                             <input type="url" class="form-control" id="twitterField">
-                            
+
                         </div>
                         <!-- Hobbies -->
                         <div id="hobbies-container">
@@ -91,7 +93,7 @@
                         </div>
 
                         <!-- Work Experience -->
-                        <div class="workEx-container">
+                        <div class="workEx-container ">
                             <label for="#" class="eq mt-3">Work Experience</label>
                             <div class="selectContainer mt-1 ">
                                 <select id="expField" class="dropdown">
@@ -102,10 +104,11 @@
                                     <option value=">8 Years">>8 Years</option>
                                 </select>
                             </div>
-                            <textarea class="form-control mt-2" id="weField" placeholder="Add your Work Experience"
-                                rows="4"></textarea>
+                            <div id="weField" class="mt-2">
+                                <textarea class="fr-view " id="example" placeholder="Add your Work Experience" rows="4">
+                                </textarea>
+                            </div>
                         </div>
-
                         <!-- Achievement -->
                         <div class="form-group " id="achievement_container">
                             <label class=" mt-3">Achievement</label>
@@ -132,6 +135,25 @@
                             </div>
                         </div>
 
+                        <!-- Select position for job apply  -->
+                        <label class="mt-5">Apply for the position</label>
+                        <select name="applyForField" id="applyForField" class="mt-4 form-select">
+                            <option value="Software Engineer">Software Engineer</option>
+                            <option value="Data Scientist">Data Scientist</option>
+                            <option value="AI/Machine Learning">AI/Machine Learning</option>
+                            <option value="Web Developer">Web Developer</option>
+                            <option value="Software Developer">Software Developer</option>
+                            <option value="Application Developer">Application Developer</option>
+                            <option value="Backend Developer">Backend Developer</option>
+                            <option value="Frontend Developer">Frontend Developer</option>
+                            <option value="UI/UX Desinger">UI/UX Desinger</option>
+                            <option value="Graphics Desinger">Graphics Desinger</option>
+                            <option value="Content Writer">Content Writer</option>
+                            <option value="Blogger">Blogger</option>
+                            <option value="Video Editor">Video Editor</option>
+                            <option value="PhotoEditor">Photo Editor</option>
+                            <option value="Music Composer">Music Composer</option>
+                        </select>
 
 
                         <!-- Generate Button -->
@@ -156,13 +178,13 @@
                         class="img-fluid my-dp" id="dpT" alt="no-img-found">
                     <p id="dobT">23-04-2001</p>
                     <p class="name" id="nameT1">Dr. Namrata Chamling</p>
-                    <p id="emailT">abhatta@shakya.com.np</p>
-                    <p id="numT">+91-9874864648, +91-7987848986</p>
+                    <p id="emailT" style="font-weight: 500;">abhatta@shakya.com.np</p>
+                    <p id="numT" style="font-weight: 500;">+91-9874864648, +91-7987848986</p>
                     <hr>
-                    <p id="addressT">25, Siddharth Apartments, Bandra</p>
+                    <p id="addressT" style="font-weight: 500;">25, Siddharth Apartments, Bandra</p>
                     <hr>
                     <label class="link_label" for="#">Contact Link</label>
-                    <p id="githubT"><i class="fab fa-github"></i>  <a href="#">https://www.google.com</a></p>
+                    <p id="githubT"><i class="fab fa-github"></i> <a href="#">https://www.google.com</a></p>
                     <p id="linkedT"><i class="fab fa-linkedin-in"></i> <a href="#">https://www.twitter.com</a></p>
                     <p id="twitterT"><i class="fab fa-twitter"></i> <a href="#">https://www.github.com</a></p>
                     <hr>
@@ -185,10 +207,15 @@
 
                 <div class="col-md-8 coloumn8">
                     <!-- Name at center -->
-                    <h1 class="text-center mt-2 name" id="nameT2" style="font-weight: 700;">Dr. Namrata Chamling</h1>
+                    <div class="heading">
+                        <h1 class="text-center mt-2 name" id="nameT2" style="font-weight: 700;">Dr. Namrata Chamling
+                        </h1>
+                        <p id="applyForT">Software Engineer</p>
+                    </div>
+
 
                     <!-- Summary -->
-                    <div class="card mt-5">
+                    <div class="card mt-3">
                         <div class="card-header text-center" id="cd-h">
                             <h3>Summary</h3>
                         </div>
@@ -283,9 +310,17 @@
     </section>
 
     <!-- Here I attach the Script file to the Docs -->
+
+    <!-- Froala cdn -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/froala-editor@latest/js/froala_editor.pkgd.min.js">
+    </script>
+
+    <!-- Bootstrap cdn -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous">
     </script>
+
+    <!-- Local Script -->
     <script src="/main.js"></script>
 </body>
 
