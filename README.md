@@ -1,2 +1,20 @@
-# Resume-Generator
-This is a Resume Generator by me. You have to fill all the entities, photo upload is mandatory. 
+<h1 align = "center">Resume Genrator</h1>
+
+## Resume Form
+<div algin = "center">
+<img src="https://github.com/dsrathore1/Resume-Generator/blob/main/Assets/Resume-Generator-Google-Chrome-2.gif">
+</div>
+
+## Resume template
+<div algin = "center">
+<img src="https://github.com/dsrathore1/Resume-Generator/blob/main/Assets/Resume-Generator-Google-Chrome-2%20(1).gif">
+</div>
+
+
+### I hope you like this project, if you wanna try it click on Resume Generator below
+
+## [Resume Generator](https://resume-generator21.herokuapp.com/)
+
+## If you like the work please star the repository and follow me for awesome upcoming project on GitHub
+
+# Thank You!!!! :slightly_smiling_face:
