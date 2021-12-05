@@ -85,8 +85,9 @@ const generate_resume = () => {
     document.getElementById('summaryT').innerHTML = document.getElementById('summaryField').value;
     document.getElementById('expT').innerHTML = document.getElementById('expField').value;
     document.getElementById('numT').innerHTML = document.getElementById('numField').value;
-    document.getElementById('weT').innerHTML = document.getElementById('weField').value;
-
+    document.getElementById('weT').innerHTML = document.getElementById('example').value;
+    document.getElementById('applyForT').innerHTML = document.getElementById('applyForField').value;
+    
     //! Skills adding
     let skillField = document.getElementsByClassName('skillField');
     let str = "";
@@ -94,7 +95,7 @@ const generate_resume = () => {
         str = str + `<li> ${e.value} </li>`;
     }
     document.getElementById('skillT').innerHTML = str;
-
+    
     //! Achievement Adding
     const aes = document.getElementsByClassName('achieveField');
     var str1 = "";
@@ -102,7 +103,7 @@ const generate_resume = () => {
         str1 += `<li>${j.value}</li>`;
     }
     document.getElementById('achieveT').innerHTML = str1;
-
+    
     //! Hobbies Adding
     const hobbiesAdding = document.getElementsByClassName('hobbiesField');
     let str2 = '';
@@ -110,7 +111,7 @@ const generate_resume = () => {
         str2 += `<li>${m.value}</li>`;
     }
     document.getElementById('hobbiesT').innerHTML = str2;
-
+    
     //! Education Qualification
     const edAdding = document.getElementsByClassName('edField');
     let str3 = "";
@@ -118,7 +119,7 @@ const generate_resume = () => {
         str3 += `<li>${a.value}</li>`
     }
     document.getElementById('eqT').innerHTML = str3;
-
+    
     //! Code for Setting DP
     let file = document.getElementById('dpField').files[0];
     // console.log(file);
@@ -126,20 +127,23 @@ const generate_resume = () => {
     let reader = new FileReader();
     reader.readAsDataURL(file);
     // console.log(reader.result);
-
-
+    
+    
     //* set image to the template
     reader.onloadend = function () {
         document.getElementById('dpT').src = reader.result;
     }
-
+    
     //! Code for Generate the Resume
     document.getElementById('resume-form').style.display = 'none'
     document.getElementById('resume-template').style.display = 'flex'
 }
 
+//! Initializing Froala
+var editor = new FroalaEditor('#example')
 
 //! Print the Resume    
 function print_resume() {
     window.print();
 }
+
