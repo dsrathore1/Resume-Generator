@@ -18,3 +18,6 @@
 ## If you like the work please star the repository and follow me for awesome upcoming project on GitHub
 
 # Thank You!!!! :slightly_smiling_face:
+
+
+NOTE :- Photo upload is mandatory and all the details shown in gif Resume Template all are fake 
