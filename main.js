@@ -146,4 +146,3 @@ var editor = new FroalaEditor('#example')
 function print_resume() {
     window.print();
 }
-
